@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Users, Clock, Target } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function LandingPage() {
   return (
@@ -15,21 +16,19 @@ export default function LandingPage() {
               <Image src="/86hire-logo.png" alt="86Hire Logo" width={180} height={60} className="h-14 w-auto" />
             </div>
             <div className="hidden md:flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                className="text-[#003772] hover:text-[#fb7323] hover:bg-white/50 backdrop-blur-sm"
-              >
-                How it Works
-              </Button>
-              <Button
-                variant="ghost"
-                className="text-[#003772] hover:text-[#fb7323] hover:bg-white/50 backdrop-blur-sm"
-              >
-                Pricing
-              </Button>
-              <Button className="bg-[#fb7323] hover:bg-[#e5651f] text-white shadow-lg hover:shadow-xl transition-all duration-300">
-                Join Waitlist
-              </Button>
+              <Link href="/how-it-works">
+                <Button
+                  variant="ghost"
+                  className="text-[#003772] hover:text-[#fb7323] hover:bg-white/50 backdrop-blur-sm"
+                >
+                  How it Works
+                </Button>
+              </Link>
+              <Link href="/signin">
+                <Button className="bg-[#fb7323] hover:bg-[#e5651f] text-white shadow-lg hover:shadow-xl transition-all duration-300">
+                  Sign In/Sign Up
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -49,22 +48,28 @@ export default function LandingPage() {
                 Skip the resume pile.
               </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-200">
-              86Hire helps restaurants hire faster by turning Indeed applicants into swipeable candidate cards: just
-              skills and experience, no names or bias.
-            </p>
+            <div className="w-screen bg-[#003772]/90 py-2 -mx-16 sm:-mx-24 lg:-mx-32 mb-8">
+              <p className="text-xl md:text-2xl mx-auto leading-relaxed text-white font-bold max-w-4xl px-4">
+                86Hire helps restaurants hire faster by turning Indeed applicants into swipeable candidate cards: just
+                skills and experience, no names or bias.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-[#fb7323] hover:bg-[#e5651f] text-white px-8 py-4 text-lg font-bold">
-                Join the Waitlist
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#003772] px-8 py-4 text-lg font-bold bg-transparent"
-              >
-                Book a Demo
-              </Button>
+              <Link href="/signin">
+                <Button size="lg" className="bg-[#fb7323] hover:bg-[#e5651f] text-white px-8 py-4 text-lg font-bold">
+                  Sign In/Sign Up
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/demo">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-[#003772] px-8 py-4 text-lg font-bold bg-transparent"
+                >
+                  Book a Demo
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -154,11 +159,11 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black mb-6">Why 86Hire?</h2>
-            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-              Built specifically for restaurant owners who need to hire fast and hire right
+            <p className="w-full text-base text-gray-200 text-center whitespace-nowrap mb-8">
+              Built specifically for restaurant owners who need to hire fast and hire right.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-start space-x-4">
               <CheckCircle className="h-8 w-8 text-[#fb7323] flex-shrink-0 mt-1" />
               <div>
@@ -197,7 +202,7 @@ export default function LandingPage() {
             <div className="flex items-start space-x-4">
               <CheckCircle className="h-8 w-8 text-[#fb7323] flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-bold mb-2">Integrates with Indeed & ZipRecruiter</h3>
+                <h3 className="text-xl font-bold mb-2">Integrates with Indeed</h3>
                 <p className="text-gray-200">Works with the job boards you already use</p>
               </div>
             </div>
@@ -206,72 +211,29 @@ export default function LandingPage() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 pb-2 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 flex flex-col items-center">
             <h2 className="text-3xl md:text-5xl font-black text-[#003772] mb-6">
-              Built in Atlanta, trusted by restaurants
+              Built for busy restaurant owners
             </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+              86Hire was founded by three startup founders with experience in restaurant hiring. We're passionate about helping restaurants and hospitality businesses hire faster and better, so you can focus on what matters most: your guests and your team.
+            </p>
+            <div className="w-full max-w-2xl">
+              <Image
+                src="/team-photo.jpg"
+                alt="86Hire Founders at Demo Day"
+                width={800}
+                height={350}
+                className="rounded-xl object-cover object-[center_40%] aspect-[16/7] w-full h-auto shadow-lg border border-gray-200"
+                priority
+              />
+            </div>
+            <div className="mt-0">
+              <Image src="/86hire-logo.png" alt="86Hire Logo" width={600} height={200} className="h-48 w-auto mx-auto" />
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <Card className="p-8">
-              <CardContent className="pt-6">
-                <p className="text-lg text-gray-600 mb-6 italic">
-                  "Finally, a hiring tool that actually understands the restaurant business. 86Hire cut our hiring time
-                  in half and helped us find better fits for our team."
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-[#fb7323] rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    JD
-                  </div>
-                  <div>
-                    <p className="font-bold text-[#003772]">John Davis</p>
-                    <p className="text-gray-600">Owner, Peachtree Bistro</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="p-8">
-              <CardContent className="pt-6">
-                <p className="text-lg text-gray-600 mb-6 italic">
-                  "The swipe interface is genius. My managers can review candidates on their phones between shifts. Game
-                  changer for busy restaurants."
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-[#fb7323] rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    SM
-                  </div>
-                  <div>
-                    <p className="font-bold text-[#003772]">Sarah Martinez</p>
-                    <p className="text-gray-600">GM, Metro Grill Group</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-20 bg-[#fb7323] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-5xl font-black mb-6">Be one of our first users.</h2>
-          <p className="text-xl mb-8 text-orange-100">We're inviting restaurant owners to test 86Hire free. Want in?</p>
-          <Card className="p-8 bg-white text-gray-900">
-            <CardContent className="pt-6">
-              <form className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Input placeholder="Your Name" className="text-lg p-4" />
-                  <Input type="email" placeholder="Email Address" className="text-lg p-4" />
-                </div>
-                <Input placeholder="What role are you hiring for?" className="text-lg p-4" />
-                <Button size="lg" className="w-full bg-[#003772] hover:bg-[#004a94] text-white text-lg font-bold py-4">
-                  Get Early Access
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
@@ -289,12 +251,12 @@ export default function LandingPage() {
                 sales@oriencareers.com
               </a>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-300 hover:text-[#fb7323]">
+                <Link href="/privacy" className="text-gray-300 hover:text-[#fb7323]">
                   Privacy Policy
-                </a>
-                <a href="#" className="text-gray-300 hover:text-[#fb7323]">
+                </Link>
+                <Link href="/terms" className="text-gray-300 hover:text-[#fb7323]">
                   Terms
-                </a>
+                </Link>
               </div>
             </div>
           </div>
