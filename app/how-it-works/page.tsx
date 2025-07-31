@@ -297,13 +297,13 @@ export default function HowItWorksPage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link href="/">
+            <Link href="https://calendly.com/oriencareers-sales/30min" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-[#fb7323] px-8 py-4 text-lg font-bold bg-transparent"
               >
-                Back to Home
+                Book a Demo
               </Button>
             </Link>
           </div>

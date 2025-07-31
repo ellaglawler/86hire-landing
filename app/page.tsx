@@ -24,6 +24,14 @@ export default function LandingPage() {
                   How it Works
                 </Button>
               </Link>
+              <Link href="/about">
+                <Button
+                  variant="ghost"
+                  className="text-[#003772] hover:text-[#fb7323] hover:bg-white/50 backdrop-blur-sm"
+                >
+                  About Us
+                </Button>
+              </Link>
               <Link href="/signin">
                 <Button className="bg-[#fb7323] hover:bg-[#e5651f] text-white shadow-lg hover:shadow-xl transition-all duration-300">
                   Sign In/Sign Up
@@ -61,7 +69,7 @@ export default function LandingPage() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="/demo">
+              <Link href="https://calendly.com/oriencareers-sales/30min" target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
                   variant="outline"
