@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Home, Search } from "lucide-react"
+import { ArrowLeft, Home, Search, Heart } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -15,7 +15,7 @@ export default function NotFound() {
             </Link>
             <Link href="/">
               <Button variant="ghost" className="text-[#003772] hover:text-[#fb7323] hover:bg-white/50 backdrop-blur-sm">
-                <ArrowLeft className="mr-2 h-4 w-4" />
+                <Home className="mr-2 h-4 w-4" />
                 Back to Home
               </Button>
             </Link>
@@ -24,62 +24,76 @@ export default function NotFound() {
       </nav>
 
       {/* Main Content */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-16">
-            <h1 className="text-6xl md:text-8xl font-black text-[#003772] mb-6">404</h1>
+      <div className="flex-1 flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="mb-8">
+            <h1 className="text-6xl md:text-8xl font-black text-[#003772] mb-4">404</h1>
             <h2 className="text-3xl md:text-4xl font-bold text-[#003772] mb-4">Page Not Found</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Oops! The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
+            <p className="text-xl text-gray-600 mb-8">
+              Oops! The page you're looking for doesn't exist. 
+              It might have been moved, deleted, or you entered the wrong URL.
             </p>
           </div>
 
-          <div className="space-y-6">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/">
-                <Button size="lg" className="bg-[#fb7323] hover:bg-[#e5651f] text-white px-8 py-4 text-lg font-bold">
-                  <Home className="mr-2 h-5 w-5" />
-                  Go to Homepage
-                </Button>
-              </Link>
-              <Link href="/how-it-works">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-[#003772] text-[#003772] hover:bg-[#003772] hover:text-white px-8 py-4 text-lg font-bold"
-                >
-                  <Search className="mr-2 h-5 w-5" />
+          <div className="mb-12">
+            <Link href="/">
+              <Button size="lg" className="bg-[#fb7323] hover:bg-[#e5651f] text-white px-8 py-4 text-lg font-bold">
+                <Home className="mr-2 h-5 w-5" />
+                Go to Homepage
+              </Button>
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-[#003772] mb-3">Popular Pages</h3>
+              <div className="space-y-3">
+                <Link href="/signin" className="block text-[#fb7323] hover:underline">
+                  Sign In / Sign Up
+                </Link>
+                <Link href="/how-it-works" className="block text-[#fb7323] hover:underline">
                   How It Works
-                </Button>
-              </Link>
+                </Link>
+                <Link href="https://calendly.com/oriencareers-sales/30min" target="_blank" rel="noopener noreferrer" className="block text-[#fb7323] hover:underline">
+                  Book a Demo
+                </Link>
+                <Link href="/about" className="block text-[#fb7323] hover:underline">
+                  About Us
+                </Link>
+              </div>
             </div>
 
-            <div className="mt-12">
-              <h3 className="text-xl font-bold text-[#003772] mb-4">Popular Pages</h3>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/signin">
-                  <Button variant="ghost" className="text-[#003772] hover:text-[#fb7323]">
-                    Sign In / Sign Up
-                  </Button>
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-[#003772] mb-3">Need Help?</h3>
+              <div className="space-y-3">
+                <a href="mailto:sales@oriencareers.com" className="block text-[#fb7323] hover:underline">
+                  Contact Support
+                </a>
+                <Link href="/how-it-works" className="block text-[#fb7323] hover:underline">
+                  Learn More
                 </Link>
-                <Link href="https://calendly.com/oriencareers-sales/30min" target="_blank" rel="noopener noreferrer">
-                  <Button variant="ghost" className="text-[#003772] hover:text-[#fb7323]">
-                    Book a Demo
-                  </Button>
-                </Link>
-                <Link href="/how-it-works">
-                  <Button variant="ghost" className="text-[#003772] hover:text-[#fb7323]">
-                    How It Works
-                  </Button>
+                <Link href="/demo" className="block text-[#fb7323] hover:underline">
+                  Schedule Demo
                 </Link>
               </div>
             </div>
           </div>
+
+          <div className="text-center">
+            <p className="text-gray-500 mb-4">
+              Can't find what you're looking for? Try searching or contact our support team.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <a href="mailto:sales@oriencareers.com" className="text-[#fb7323] hover:underline">
+                sales@oriencareers.com
+              </a>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
       {/* Footer */}
-      <footer className="bg-[#003772] text-white py-12 mt-20">
+      <footer className="bg-[#003772] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">

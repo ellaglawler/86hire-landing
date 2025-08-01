@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, ArrowRight, Calendar, Clock, Users, Zap, CheckCircle, Phone, Mail, MapPin } from "lucide-react"
+import { ArrowLeft, ArrowRight, Calendar, Clock, Users, Zap, CheckCircle, Phone, Mail, MapPin, Star } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -28,268 +27,273 @@ export default function DemoPage() {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-[#003772] to-[#004a94] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-black mb-6">Book Your 86Hire Demo</h1>
+          <h1 className="text-4xl md:text-6xl font-black mb-6">Book Your Demo</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
-            See how 86Hire can transform your restaurant hiring process in just 15 minutes
+            See how 86Hire can transform your restaurant hiring in just 30 minutes
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Demo Booking Form */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Demo Form */}
-            <div className="lg:order-2">
-              <Card className="shadow-xl border-0">
-                <CardContent className="p-8">
-                  <div className="text-center mb-8">
-                    <h2 className="text-2xl font-bold text-[#003772] mb-2">Schedule Your Demo</h2>
-                    <p className="text-gray-600">15-minute personalized walkthrough</p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-black text-[#003772] mb-6">Schedule Your Demo</h2>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                Join us for a personalized 30-minute demo where we'll show you exactly how 86Hire works 
+                and answer all your questions about transforming your hiring process.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-[#fb7323] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Calendar className="h-4 w-4 text-white" />
                   </div>
-                  
-                  <form className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="firstName" className="text-sm font-medium text-gray-700">First Name *</label>
-                        <Input
-                          id="firstName"
-                          type="text"
-                          placeholder="Your first name"
-                          className="h-12"
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="lastName" className="text-sm font-medium text-gray-700">Last Name *</label>
-                        <Input
-                          id="lastName"
-                          type="text"
-                          placeholder="Your last name"
-                          className="h-12"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="restaurantName" className="text-sm font-medium text-gray-700">Restaurant Name *</label>
-                      <Input
-                        id="restaurantName"
-                        type="text"
-                        placeholder="Your restaurant name"
-                        className="h-12"
-                        required
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium text-gray-700">Email Address *</label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="your.email@restaurant.com"
-                        className="h-12"
-                        required
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        placeholder="(555) 123-4567"
-                        className="h-12"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="role" className="text-sm font-medium text-gray-700">Your Role *</label>
-                      <select
-                        id="role"
-                        className="w-full h-12 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#fb7323] focus:border-transparent"
-                        required
-                      >
-                        <option value="">Select your role</option>
-                        <option value="owner">Restaurant Owner</option>
-                        <option value="manager">General Manager</option>
-                        <option value="hr">HR Manager</option>
-                        <option value="operations">Operations Manager</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="hiringVolume" className="text-sm font-medium text-gray-700">Monthly Hiring Volume *</label>
-                      <select
-                        id="hiringVolume"
-                        className="w-full h-12 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#fb7323] focus:border-transparent"
-                        required
-                      >
-                        <option value="">Select hiring volume</option>
-                        <option value="1-5">1-5 hires per month</option>
-                        <option value="6-15">6-15 hires per month</option>
-                        <option value="16-30">16-30 hires per month</option>
-                        <option value="30+">30+ hires per month</option>
-                      </select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium text-gray-700">Additional Notes</label>
-                      <textarea
-                        id="message"
-                        rows={4}
-                        placeholder="Tell us about your hiring challenges or specific questions..."
-                        className="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#fb7323] focus:border-transparent resize-none"
-                      ></textarea>
-                    </div>
-
-                    <div className="flex items-center space-x-2">
-                      <input type="checkbox" className="rounded border-gray-300" required />
-                      <span className="text-sm text-gray-600">
-                        I agree to be contacted about 86Hire and understand my data will be handled according to the{" "}
-                        <Link href="#" className="text-[#fb7323] hover:underline">Privacy Policy</Link>
-                      </span>
-                    </div>
-
-                    <Button type="submit" className="w-full bg-[#fb7323] hover:bg-[#e5651f] text-white h-12 text-lg font-bold">
-                      Schedule Demo
-                      <Calendar className="ml-2 h-5 w-5" />
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Benefits & Info */}
-            <div className="lg:order-1">
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-3xl font-black text-[#003772] mb-4">What You'll See</h2>
-                  <p className="text-lg text-gray-600 mb-6">
-                    Get a personalized walkthrough of how 86Hire can solve your specific hiring challenges.
-                  </p>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-[#fb7323] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Zap className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-[#003772] mb-2">Live Platform Demo</h3>
-                      <p className="text-gray-600">
-                        See 86Hire in action with real candidate data and the swipe-to-hire interface.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-[#fb7323] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Users className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-[#003772] mb-2">Customized for Your Needs</h3>
-                      <p className="text-gray-600">
-                        We'll tailor the demo to your specific hiring volume and restaurant type.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-[#fb7323] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-[#003772] mb-2">15 Minutes, No Pressure</h3>
-                      <p className="text-gray-600">
-                        Quick, focused demo with plenty of time for your questions. No sales pitch.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-[#fb7323] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-[#003772] mb-2">Free Trial Access</h3>
-                      <p className="text-gray-600">
-                        Get immediate access to test 86Hire with your own job postings after the demo.
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className="font-bold text-[#003772]">30-Minute Session</h3>
+                    <p className="text-gray-600">Quick, focused demo that fits your busy schedule</p>
                   </div>
                 </div>
-
-                <Card className="bg-[#003772] text-white p-6">
-                  <CardContent className="p-0">
-                    <h3 className="text-xl font-bold mb-4">Demo Details</h3>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-3">
-                        <Clock className="h-5 w-5 text-[#fb7323]" />
-                        <span>15 minutes</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <Phone className="h-5 w-5 text-[#fb7323]" />
-                        <span>Video call (Zoom/Teams)</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <Calendar className="h-5 w-5 text-[#fb7323]" />
-                        <span>Flexible scheduling</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <MapPin className="h-5 w-5 text-[#fb7323]" />
-                        <span>Remote - no travel needed</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-[#fb7323] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Users className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[#003772]">Personalized for You</h3>
+                    <p className="text-gray-600">We'll tailor the demo to your specific hiring needs</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-[#fb7323] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Zap className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[#003772]">Live Demo</h3>
+                    <p className="text-gray-600">See the platform in action with real examples</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-[#fb7323] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[#003772]">No Pressure</h3>
+                    <p className="text-gray-600">Learn about our solution with zero commitment</p>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <Card className="shadow-xl border-0">
+              <CardContent className="p-8">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-[#003772] mb-2">Ready to Get Started?</h3>
+                  <p className="text-gray-600">Click below to schedule your demo</p>
+                </div>
+                
+                <Link href="https://calendly.com/oriencareers-sales/30min" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-[#fb7323] hover:bg-[#e5651f] text-white h-14 text-lg font-bold mb-4">
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Schedule Demo
+                  </Button>
+                </Link>
+                
+                <div className="text-center">
+                  <p className="text-sm text-gray-500">
+                    Can't find a time that works?{" "}
+                    <a href="mailto:sales@oriencareers.com" className="text-[#fb7323] hover:underline">
+                      Email us
+                    </a>
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* What You'll See */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-black text-[#003772] mb-6">What You'll See</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Get a comprehensive look at how 86Hire transforms your hiring process
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="text-center p-6 border-0 shadow-lg">
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-[#fb7323] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold">1</span>
+                </div>
+                <h3 className="text-lg font-bold text-[#003772] mb-2">Platform Walkthrough</h3>
+                <p className="text-gray-600 text-sm">
+                  See how easy it is to connect your Indeed job posting and start reviewing candidates
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6 border-0 shadow-lg">
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-[#fb7323] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold">2</span>
+                </div>
+                <h3 className="text-lg font-bold text-[#003772] mb-2">Candidate Cards</h3>
+                <p className="text-gray-600 text-sm">
+                  Experience our unique candidate card format that removes bias and focuses on skills
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6 border-0 shadow-lg">
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-[#fb7323] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold">3</span>
+                </div>
+                <h3 className="text-lg font-bold text-[#003772] mb-2">Swipe Interface</h3>
+                <p className="text-gray-600 text-sm">
+                  See how the intuitive swipe interface makes hiring decisions lightning fast
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6 border-0 shadow-lg">
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-[#fb7323] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold">4</span>
+                </div>
+                <h3 className="text-lg font-bold text-[#003772] mb-2">Automated Communication</h3>
+                <p className="text-gray-600 text-sm">
+                  Learn how 86Hire automatically handles candidate communication for you
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6 border-0 shadow-lg">
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-[#fb7323] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold">5</span>
+                </div>
+                <h3 className="text-lg font-bold text-[#003772] mb-2">Analytics & Insights</h3>
+                <p className="text-gray-600 text-sm">
+                  Discover how our analytics help you improve your hiring process over time
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6 border-0 shadow-lg">
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-[#fb7323] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold">6</span>
+                </div>
+                <h3 className="text-lg font-bold text-[#003772] mb-2">Q&A Session</h3>
+                <p className="text-gray-600 text-sm">
+                  Get all your questions answered by our restaurant hiring experts
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Details */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="shadow-xl border-0">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl font-bold text-[#003772] mb-4">Demo Details</h2>
+                <p className="text-gray-600">Everything you need to know about your demo session</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <Clock className="h-5 w-5 text-[#fb7323]" />
+                    <span className="font-medium">Duration: 30 minutes</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Calendar className="h-5 w-5 text-[#fb7323]" />
+                    <span className="font-medium">Format: Video call</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Users className="h-5 w-5 text-[#fb7323]" />
+                    <span className="font-medium">Attendees: You + 1-2 team members</span>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-[#fb7323]" />
+                    <span className="font-medium">No preparation needed</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-[#fb7323]" />
+                    <span className="font-medium">No commitment required</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-[#fb7323]" />
+                    <span className="font-medium">Recording available</span>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* FAQ */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#003772] mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-black text-[#003772] mb-6">Frequently Asked Questions</h2>
           </div>
-
-          <div className="space-y-8">
-            <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-xl font-bold text-[#003772] mb-3">What happens during the demo?</h3>
-              <p className="text-gray-600">
-                We'll walk you through the 86Hire platform, show you how to connect your Indeed job postings, 
-                demonstrate the swipe-to-hire interface, and answer any questions about the process.
-              </p>
-            </div>
-
-            <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-xl font-bold text-[#003772] mb-3">Do I need to prepare anything?</h3>
-              <p className="text-gray-600">
-                No preparation needed! Just bring your questions about restaurant hiring challenges. 
-                We'll handle the rest and show you exactly how 86Hire works.
-              </p>
-            </div>
-
-            <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-xl font-bold text-[#003772] mb-3">Is there any commitment required?</h3>
-              <p className="text-gray-600">
-                Absolutely not. The demo is completely free with no obligation. We want you to see the value 
-                before making any decisions about using 86Hire.
-              </p>
-            </div>
-
-            <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-xl font-bold text-[#003772] mb-3">Can I try 86Hire after the demo?</h3>
-              <p className="text-gray-600">
-                Yes! After the demo, you'll get immediate access to test 86Hire with your own job postings 
-                for free during our beta period.
-              </p>
-            </div>
+          
+          <div className="space-y-6">
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-[#003772] mb-2">What if I need to reschedule?</h3>
+                <p className="text-gray-600">
+                  No problem! You can reschedule your demo up to 24 hours before the scheduled time. 
+                  Just click the reschedule link in your confirmation email.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-[#003772] mb-2">Do I need to install anything?</h3>
+                <p className="text-gray-600">
+                  No installation required! We'll send you a simple video call link that works in any web browser.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-[#003772] mb-2">Can I bring my team?</h3>
+                <p className="text-gray-600">
+                  Absolutely! We encourage you to invite key decision makers from your team. 
+                  Just let us know how many people will be joining.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-[#003772] mb-2">What happens after the demo?</h3>
+                <p className="text-gray-600">
+                  After your demo, we'll send you a follow-up email with next steps, pricing information, 
+                  and any additional resources you requested.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -299,25 +303,15 @@ export default function DemoPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-5xl font-black mb-6">Ready to See 86Hire in Action?</h2>
           <p className="text-xl mb-8 text-orange-100">
-            Book your demo today and see how we can transform your hiring process
+            Book your demo today and discover how to hire faster and smarter
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#demo-form">
-              <Button size="lg" className="bg-white text-[#fb7323] hover:bg-gray-100 px-8 py-4 text-lg font-bold">
-                Schedule Demo Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#fb7323] px-8 py-4 text-lg font-bold bg-transparent"
-              >
-                Back to Home
-              </Button>
-            </Link>
-          </div>
+          <Link href="https://calendly.com/oriencareers-sales/30min" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-white text-[#fb7323] hover:bg-gray-100 px-8 py-4 text-lg font-bold">
+              <Calendar className="mr-2 h-5 w-5" />
+              Schedule Your Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, ArrowRight, Users, Target, Heart, MapPin } from "lucide-react"
+import { ArrowLeft, ArrowRight, Calendar, Clock, Users, Zap, CheckCircle, Phone, Mail, MapPin, Heart } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -80,7 +80,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center p-8 border-0 shadow-lg">
               <CardContent className="pt-6">
-                <Target className="h-12 w-12 text-[#fb7323] mx-auto mb-4" />
+                <Zap className="h-12 w-12 text-[#fb7323] mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-[#003772] mb-3">Speed</h3>
                 <p className="text-gray-600">
                   Transform hours of resume reading into minutes of smart decisions
@@ -111,76 +111,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The Problem We Solve */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="lg:order-2">
-              <h2 className="text-3xl md:text-4xl font-black text-[#003772] mb-6">The Problem We Solve</h2>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">✕</span>
-                  </div>
-                  <p className="text-gray-700">Restaurant owners spend hours every week reading resumes</p>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">✕</span>
-                  </div>
-                  <p className="text-gray-700">Great candidates get lost in traditional resume formats</p>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">✕</span>
-                  </div>
-                  <p className="text-gray-700">Unconscious bias affects hiring decisions</p>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">✕</span>
-                  </div>
-                  <p className="text-gray-700">High turnover from poor hiring decisions</p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:order-1">
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-[#003772] mb-4">Our Solution</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-white text-sm">✓</span>
-                    </div>
-                    <p className="text-gray-700">Swipe-to-hire interface for lightning-fast decisions</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-white text-sm">✓</span>
-                    </div>
-                    <p className="text-gray-700">Focus on skills and experience, not names or photos</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-white text-sm">✓</span>
-                    </div>
-                    <p className="text-gray-700">Automated candidate communication</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-white text-sm">✓</span>
-                    </div>
-                    <p className="text-gray-700">Better hires lead to lower turnover</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Location */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center mb-6">
             <MapPin className="h-8 w-8 text-[#fb7323] mr-3" />
@@ -190,7 +122,7 @@ export default function AboutPage() {
             We're proud to be part of Atlanta's growing tech and restaurant community. 
             Our city's vibrant food scene and entrepreneurial spirit inspire everything we build.
           </p>
-          <div className="bg-gray-50 rounded-xl p-6 inline-block">
+          <div className="bg-white rounded-xl p-6 inline-block">
             <p className="text-gray-700">
               <strong>86Hire</strong><br />
               Atlanta, Georgia<br />

@@ -24,150 +24,120 @@ export default function TermsPage() {
       </nav>
 
       {/* Main Content */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-black text-[#003772] mb-6">Terms of Service</h1>
-            <p className="text-lg text-gray-600">Last updated: July 2025</p>
-          </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="prose prose-lg max-w-none">
+          <h1 className="text-4xl font-black text-[#003772] mb-8">Terms of Service</h1>
+          <p className="text-gray-600 mb-8">Last updated: July 2025</p>
 
-          <div className="prose prose-lg max-w-none">
-            <div className="space-y-8">
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">1. Acceptance of Terms</h2>
-                <p className="text-gray-700 mb-4">
-                  By accessing and using 86Hire ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
-                </p>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">1. Acceptance of Terms</h2>
+            <p className="text-gray-700 mb-4">
+              By accessing and using 86Hire ("the Service"), you accept and agree to be bound by the terms and provision of this agreement.
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">2. Description of Service</h2>
-                <p className="text-gray-700 mb-4">
-                  86Hire is a hiring platform designed specifically for restaurant owners and managers. The Service helps users streamline their hiring process by connecting to job posting platforms, presenting candidate information in a card-based format, and facilitating candidate communication.
-                </p>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">2. Description of Service</h2>
+            <p className="text-gray-700 mb-4">
+              86Hire is a restaurant hiring platform that transforms Indeed applicants into swipeable candidate cards, 
+              helping restaurant owners hire faster and with less bias.
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">3. User Accounts</h2>
-                <div className="space-y-4">
-                  <p className="text-gray-700">
-                    To use certain features of the Service, you must create an account. You agree to:
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                    <li>Provide accurate, current, and complete information during registration</li>
-                    <li>Maintain and update your account information to keep it accurate, current, and complete</li>
-                    <li>Maintain the security of your password and accept all risks of unauthorized access to your account</li>
-                    <li>Notify us immediately of any unauthorized use of your account</li>
-                    <li>Ensure that you exit from your account at the end of each session</li>
-                  </ul>
-                </div>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">3. User Accounts</h2>
+            <p className="text-gray-700 mb-4">
+              You are responsible for maintaining the confidentiality of your account and password. 
+              You agree to accept responsibility for all activities that occur under your account.
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">4. Acceptable Use</h2>
-                <div className="space-y-4">
-                  <p className="text-gray-700">
-                    You agree not to use the Service to:
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                    <li>Violate any applicable laws or regulations</li>
-                    <li>Infringe upon the rights of others</li>
-                    <li>Upload, post, or transmit any content that is unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable</li>
-                    <li>Impersonate any person or entity or misrepresent your affiliation with any person or entity</li>
-                    <li>Attempt to gain unauthorized access to the Service or its related systems or networks</li>
-                    <li>Use the Service for any commercial purpose not expressly permitted by these Terms</li>
-                  </ul>
-                </div>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">4. Privacy Policy</h2>
+            <p className="text-gray-700 mb-4">
+              Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the Service.
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">5. Privacy and Data Protection</h2>
-                <p className="text-gray-700 mb-4">
-                  Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the Service, to understand our practices regarding the collection and use of your information.
-                </p>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">5. Acceptable Use</h2>
+            <p className="text-gray-700 mb-4">
+              You agree not to use the Service to:
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 mb-4">
+              <li>Violate any applicable laws or regulations</li>
+              <li>Infringe upon the rights of others</li>
+              <li>Transmit harmful, offensive, or inappropriate content</li>
+              <li>Attempt to gain unauthorized access to the Service</li>
+            </ul>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">6. Intellectual Property</h2>
-                <div className="space-y-4">
-                  <p className="text-gray-700">
-                    The Service and its original content, features, and functionality are and will remain the exclusive property of 86Hire and its licensors. The Service is protected by copyright, trademark, and other laws.
-                  </p>
-                  <p className="text-gray-700">
-                    You retain ownership of any content you submit to the Service, but you grant us a license to use, modify, and display such content in connection with providing the Service.
-                  </p>
-                </div>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">6. Intellectual Property</h2>
+            <p className="text-gray-700 mb-4">
+              The Service and its original content, features, and functionality are owned by 86Hire and are protected by 
+              international copyright, trademark, patent, trade secret, and other intellectual property laws.
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">7. Third-Party Services</h2>
-                <p className="text-gray-700 mb-4">
-                  The Service may integrate with third-party platforms such as Indeed. Your use of such third-party services is subject to their respective terms of service and privacy policies. We are not responsible for the content or practices of any third-party services.
-                </p>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">7. Termination</h2>
+            <p className="text-gray-700 mb-4">
+              We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, 
+              including without limitation if you breach the Terms.
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">8. Disclaimers</h2>
-                <div className="space-y-4">
-                  <p className="text-gray-700">
-                    THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
-                  </p>
-                  <p className="text-gray-700">
-                    We do not guarantee that the Service will be uninterrupted, secure, or error-free, or that any defects will be corrected.
-                  </p>
-                </div>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">8. Limitation of Liability</h2>
+            <p className="text-gray-700 mb-4">
+              In no event shall 86Hire, nor its directors, employees, partners, agents, suppliers, or affiliates, 
+              be liable for any indirect, incidental, special, consequential, or punitive damages.
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">9. Limitation of Liability</h2>
-                <p className="text-gray-700 mb-4">
-                  IN NO EVENT SHALL 86HIRE, ITS DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM YOUR USE OF THE SERVICE.
-                </p>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">9. Disclaimer</h2>
+            <p className="text-gray-700 mb-4">
+              The Service is provided on an "AS IS" and "AS AVAILABLE" basis. 86Hire makes no warranties, 
+              expressed or implied, and hereby disclaims all warranties.
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">10. Termination</h2>
-                <div className="space-y-4">
-                  <p className="text-gray-700">
-                    We may terminate or suspend your account and bar access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.
-                  </p>
-                  <p className="text-gray-700">
-                    If you wish to terminate your account, you may simply discontinue using the Service.
-                  </p>
-                </div>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">10. Governing Law</h2>
+            <p className="text-gray-700 mb-4">
+              These Terms shall be interpreted and governed by the laws of the State of Georgia, 
+              without regard to its conflict of law provisions.
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">11. Changes to Terms</h2>
-                <p className="text-gray-700 mb-4">
-                  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.
-                </p>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">11. Changes to Terms</h2>
+            <p className="text-gray-700 mb-4">
+              We reserve the right to modify or replace these Terms at any time. If a revision is material, 
+              we will provide at least 30 days notice prior to any new terms taking effect.
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">12. Governing Law</h2>
-                <p className="text-gray-700 mb-4">
-                  These Terms shall be interpreted and governed by the laws of the State of Georgia, without regard to its conflict of law provisions.
-                </p>
-              </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">12. Contact Information</h2>
+            <p className="text-gray-700 mb-4">
+              If you have any questions about these Terms, please contact us at{" "}
+              <a href="mailto:sales@oriencareers.com" className="text-[#fb7323] hover:underline">
+                sales@oriencareers.com
+              </a>
+            </p>
+          </section>
 
-              <section>
-                <h2 className="text-2xl font-bold text-[#003772] mb-4">13. Contact Information</h2>
-                <p className="text-gray-700 mb-4">
-                  If you have any questions about these Terms of Service, please contact us at:
-                </p>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-gray-700">
-                    <strong>Email:</strong> sales@oriencareers.com<br />
-                    <strong>Address:</strong> Atlanta, Georgia<br />
-                    <strong>Website:</strong> 86Hire.com
-                  </p>
-                </div>
-              </section>
-            </div>
-          </div>
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#003772] mb-4">13. Entire Agreement</h2>
+            <p className="text-gray-700 mb-4">
+              These Terms constitute the entire agreement between you and 86Hire regarding the use of the Service.
+            </p>
+          </section>
         </div>
-      </section>
+      </div>
 
       {/* Footer */}
       <footer className="bg-[#003772] text-white py-12">

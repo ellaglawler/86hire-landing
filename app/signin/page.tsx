@@ -192,14 +192,6 @@ export default function SignInPage() {
                 Contact our support team
               </Link>
             </p>
-            <div className="flex space-x-4">
-              <Link href="/privacy" className="text-gray-300 hover:text-[#fb7323]">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-300 hover:text-[#fb7323]">
-                Terms
-              </Link>
-            </div>
           </div>
         </div>
       </div>
