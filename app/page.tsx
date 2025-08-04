@@ -56,7 +56,7 @@ export default function LandingPage() {
                 Skip the resume pile.
               </span>
             </h1>
-            <div className="w-screen bg-[#003772]/90 py-2 -mx-16 sm:-mx-24 lg:-mx-32 mb-8">
+            <div className="w-screen bg-[#003772]/90 py-2 -ml-[calc(50vw-50%)] mb-8">
               <p className="text-xl md:text-2xl mx-auto leading-relaxed text-white font-bold max-w-4xl px-4">
                 86Hire helps restaurants hire faster by turning Indeed applicants into swipeable candidate cards: just
                 skills and experience, no names or bias.
