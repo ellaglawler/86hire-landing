@@ -1,11 +1,16 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, ArrowRight, Users, Clock, Target } from "lucide-react"
+import { CheckCircle, ArrowRight, Users, Clock, Target, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function LandingPage() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -15,6 +20,8 @@ export default function LandingPage() {
             <div className="flex items-center">
               <Image src="/86hire-logo.png" alt="86Hire Logo" width={180} height={60} className="h-14 w-auto" />
             </div>
+            
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-4">
               <Link href="/how-it-works">
                 <Button
@@ -38,7 +45,48 @@ export default function LandingPage() {
                 </Button>
               </Link>
             </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-[#003772] hover:text-[#fb7323]"
+              >
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </Button>
+            </div>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 py-4">
+              <div className="flex flex-col space-y-3">
+                <Link href="/how-it-works" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-[#003772] hover:text-[#fb7323] hover:bg-white/50"
+                  >
+                    How it Works
+                  </Button>
+                </Link>
+                <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-[#003772] hover:text-[#fb7323] hover:bg-white/50"
+                  >
+                    About Us
+                  </Button>
+                </Link>
+                <Link href="/signin" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button className="w-full bg-[#fb7323] hover:bg-[#e5651f] text-white shadow-lg hover:shadow-xl transition-all duration-300">
+                    Sign In/Sign Up
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
